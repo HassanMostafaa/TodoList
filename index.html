@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h2>Make A List 😊</h2>
+      <br />
+      <form action="">
+        <input
+          id="input"
+          autocomplete="off"
+          type="text"
+          placeholder="Add to the List."
+        />
+        <button type="submit">Add</button>
+
+        <div class="list">
+          <ul id="ul"></ul>
+        </div>
+      </form>
+      <br />
+      <br />
+      <button onclick="ClearLocalStorage()">Clear LocalStorage</button>
+    </div>
+    <div class="notif">
+      <p>
+        These Items Are Stored In the Browser's LocalStorage So You Can
+        Refresh/close the page and your List will stay the same
+      </p>
+      <!-- <p id="closeNotification" style="text-align: right;">X</p> -->
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
