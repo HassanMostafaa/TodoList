@@ -14,17 +14,29 @@ addBtn.addEventListener("click", (e) => {
   currentList.appendChild(newLi);
   newLi.classList.add("foo");
   input.value = "";
-  location.reload();
+  //   location.reload();
   //localstorage things
   localStorage.setItem("List", currentList.innerHTML);
   localStorage.setItem("counter", count);
-});
 
-function printFromLocalStorage() {
-  currentList.innerHTML = localStorage.getItem("List");
-  count = localStorage.getItem("counter");
-}
-printFromLocalStorage();
+  function printFromLocalStorage() {
+    currentList.innerHTML = localStorage.getItem("List");
+    count = localStorage.getItem("counter");
+  }
+  printFromLocalStorage();
+
+  var foo = document.querySelectorAll(".foo");
+  foo.forEach((e) =>
+    e.addEventListener("click", () => {
+      e.classList.toggle("DONE");
+      if (e.style.textDecoration == "line-through") {
+        e.style.textDecoration = "none";
+      } else {
+        e.style.textDecoration = "line-through";
+      }
+    })
+  );
+});
 
 function ClearLocalStorage() {
   localStorage.clear();
@@ -32,17 +44,6 @@ function ClearLocalStorage() {
   count = 0;
 }
 
-var foo = document.querySelectorAll(".foo");
-foo.forEach((e) =>
-  e.addEventListener("click", () => {
-    e.classList.toggle("DONE");
-    if (e.style.textDecoration == "line-through") {
-      e.style.textDecoration = "none";
-    } else {
-      e.style.textDecoration = "line-through";
-    }
-  })
-);
 document.getElementById("closeNotification").addEventListener("click", () => {
   document.querySelector(".notif").style.display = "none";
 });
