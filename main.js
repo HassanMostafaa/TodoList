@@ -38,6 +38,12 @@ addBtn.addEventListener("click", (e) => {
   );
 });
 
+function printFromLocalStorage() {
+  currentList.innerHTML = localStorage.getItem("List");
+  count = localStorage.getItem("counter");
+}
+printFromLocalStorage();
+
 function ClearLocalStorage() {
   localStorage.clear();
   location.reload();
