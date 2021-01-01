@@ -43,6 +43,17 @@ function printFromLocalStorage() {
   count = localStorage.getItem("counter");
 }
 printFromLocalStorage();
+var foo = document.querySelectorAll(".foo");
+foo.forEach((e) =>
+  e.addEventListener("click", () => {
+    e.classList.toggle("DONE");
+    if (e.style.textDecoration == "line-through") {
+      e.style.textDecoration = "none";
+    } else {
+      e.style.textDecoration = "line-through";
+    }
+  })
+);
 
 function ClearLocalStorage() {
   localStorage.clear();
