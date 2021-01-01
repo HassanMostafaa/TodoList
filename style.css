@@ -56,7 +56,7 @@ button:hover{
     cursor: pointer;
 }
 .foo{
-    padding: 10px;
+    padding:7px 10px;
     background-color: #f4f4f4;
     cursor: pointer;
     position: relative;
@@ -66,13 +66,22 @@ button:hover{
     min-height: 20px;
 }
 .foo:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.112);
+}
+.timeStyle{
+    color: rgba(51, 51, 51, 0.63);
+    margin:5px;
+}
+.DONE{
+    text-decoration: line-through;
+    color: rgba(51, 51, 51, 0.289);
 }
 .DONE::after{
     position: absolute;
     right:15px;
     top: 5PX;
-    color: green;
+  
+    color: rgba(0, 128, 0, 0.699);
     content: "☑";
 }
 
