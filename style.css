@@ -8,19 +8,24 @@
    color: #333;
    
 }
-body{
-    background: rgb(184, 220, 235);
+.body{
+    background-color: #e8ebec;
+    background-image: linear-gradient(0deg, #e8ebec 0%, #B5FFFC 100%);
+    
+    
+        height: 100vh;
+    
 }
 .notif{
     padding:20px;
-    background: #f4f4f4c7;
+    background-color: rgba(255, 255, 255, 0.801);
     position: absolute;
     bottom: 20px;
     right: 20px;
     text-transform: capitalize;
     border-radius: 10px;
     color: black;
-   
+   width: 450px;
 }
 #closeNotification{
     color: #333;
@@ -35,8 +40,9 @@ body{
     box-shadow: 0 0 25px rgba(0, 0, 0, .2);
    max-width: 350px;
    min-width: 350px;
+   background-color: rgba(255, 255, 255, 1);
    position: absolute;
-   background: rgba(255, 255, 255, 53);
+  
    top: 50%;
    left: 50%;
    border-radius: 15px;
