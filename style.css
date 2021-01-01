@@ -92,4 +92,12 @@ button,input{
 .notif{
     display: none;
 }
+.DONE::after{
+    position: absolute;
+    right:15px;
+    top: 1PX;
+    color: green;
+    content: "☑";
+}
+
 }
